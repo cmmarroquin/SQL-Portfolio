@@ -1,0 +1,28 @@
+--Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "shirt", 90, 1, 10.00);
+INSERT INTO store VALUES (2, "pants", 55, 5, 20.49);
+INSERT INTO store VALUES (3, "skirt", 23, 2, 15.99);
+INSERT INTO store VALUES (4, "gloves", 9, 4, 5.49);
+INSERT INTO store VALUES (5, "socks", 10, 5, 1.99);
+INSERT INTO store VALUES (6, "bra", 12, 1, 15.50);
+INSERT INTO store VALUES (7, "PJs", 5, 2, 15.00);
+INSERT INTO store VALUES (8, "boxers", 4, 5, 5.00);
+INSERT INTO store VALUES (9, "hat", 5, 5, 7.75);
+INSERT INTO store VALUES (10, "hankerchief", 3, 2, 9.99);
+INSERT INTO store VALUES (11, "blouse", 49, 1, 13.25);
+INSERT INTO store VALUES (12, "dress", 41, 2, 22.50);
+INSERT INTO store VALUES (13, "leggings", 7, 4, 10.99);
+INSERT INTO store VALUES (14, "slacks", 37, 1, 17.49);
+INSERT INTO store VALUES (15, "sun glasses", 20, 4, 50.00);
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the avg price of items in aisle 5? 
+SELECT AVG(price) "avg price on aisle 5"
+FROM store
+where aisle= 5; 
